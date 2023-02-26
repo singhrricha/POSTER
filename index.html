@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster</title>
+    <style>
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-size: 8px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .grid .invgrid .invgrid2 {
+    height: calc(595px / 1.15);
+    width: calc(420px / 1.15);
+  }
+}
+
+.grid {
+  display: grid;
+  height: 595px;
+  width: 420px;
+  background: #F49D1A;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 6% 18% repeat(4, 19%);
+}
+
+.invgrid {
+  height: 595px;
+  width: 420px;
+  background: transparent;
+  border: 10px solid white;
+  margin-left: -115px;
+  margin-top: -10px;
+  z-index: 999;
+}
+
+.invgrid2 {
+  height: 595px;
+  width: 420px;
+  background: transparent;
+  border: 100px solid #B01E68;
+  margin-left: -310px;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.triangle {
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid #F49D1A;
+  border-left: 70px solid transparent;
+  border-top: 1px solid #B01E68;
+  z-index: 6;
+}
+
+.triangle3 {
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid #B01E68;
+  border-left: 70px solid transparent;
+}
+
+.triangle4 {
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid #F49D1A;
+  border-left: 70px solid transparent;
+}
+
+.rectangle {
+  transform: rotate(90deg);
+  width: 270px;
+  height: 82px;
+}
+
+.rectangle2 {
+  transform: rotate(225deg);  
+  width: 5px;
+  height: 500px;
+}
+
+.red {
+  background: #DC3535;
+}
+
+.black {
+  background: #B01E68;
+}
+
+.yellow {
+  background: #F49D1A;
+}
+
+.c1cb {
+  grid-row: 3;
+  margin: -6px;
+  height: 380%;
+  width: 380%;
+  border-radius: 50%;
+  margin-top: -50px;
+  margin-left: -120px;
+}
+
+.c2cr {
+  grid-row: 3;
+  margin: -73px;
+  margin-top: 3px;
+  height: 290%;
+  width: 290%;
+  border-radius: 50%;
+  margin-left: -178px;
+}
+
+.tr1cb {
+  grid-row: 2;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-top: -21px;
+  margin-bottom: 16px;
+  margin-left: -105px;
+  transform: rotate(180deg);
+}
+
+.tr2cy {
+  grid-row: 3;	
+  width: 350px;
+  height: 350px;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-top: -58px;
+  margin-bottom: 16px;
+  margin-left: 27px;
+}
+
+.tr3cy {
+  grid-row: 3;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-top: 228px;
+  margin-left: -292px;
+  transform: rotate(0deg);   
+}
+
+.tr4cr {
+  grid-row: 4;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  margin-top: 40px;
+  margin-left: -105px;
+  z-index: 5;
+  transform: rotate(180deg); 
+}
+
+.r1cb {
+  grid-row: 1;
+  margin-left: -95px;
+  margin-top: 179px;
+  z-index: 2;
+}
+
+.r2cy {
+  grid-row: 4;
+  margin: -235px 0 0 192px;
+  z-index: 99;
+}
+
+.r3cy {
+  grid-row: 2;
+  margin-left: -148px;
+  margin-top: 250px;
+}
+
+.t1cy {
+  grid-row: 5;
+  z-index: 3;
+  margin: -240px -90px 0 48px;
+  color: #F49D1A;
+  display: inline-block;
+  font-family: 'Khand', sans-serif;
+}
+
+.t2cr {
+  color: #DC3535;
+  display: inline;
+  font-family: 'Khand', sans-serif;
+}
+    </style>
+</head>
+<body>
+    <main class="grid">
+        <div class="invgrid"></div>
+        <div class="invgrid2"></div>
+  
+      <div class="t1cy">
+          <h1>"BETTER TO BE <span class="t2cr">STRONG</span> THAN PRETTY AND USELESS!</h1>		
+      </div>
+  
+          <div class="black rectangle r1cb"></div>
+          <div class="yellow rectangle2 r2cy"></div>
+          <div class="yellow rectangle r3cy"></div>				
+          <div class="black triangle2 tr1cb"></div>	
+          <div class="black triangle tr2cy"></div>	
+          <div class="black c1cb"></div>
+          <div class="red c2cr"></div>
+          <div class="red triangle3 tr4cr"></div>	
+          <div class="triangle4 tr3cy"></div>			
+      
+      </main>
+</body>
+</html>
